@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Austin Baum</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+          <nav class="navbar">
+            <div class="name" >
+                <div class="title">
+                    Austin
+                </div>
+                <div class="title1">
+                    Baum
+                </div>
+            </div>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+        </header>
+    <section id="home">
+        <div class="pimg1">
+            <div class="ptext">
+                <span class="border">Austin Baum</span>
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <div class="contain revealR">
+            <h2>About</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, nobis dolor aspernatur nemo repellat voluptatem!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, nobis dolor aspernatur nemo repellat voluptatem!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, nobis dolor aspernatur nemo repellat voluptatem!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <div class="contain revealB">
+            <h2>Projects</h2>
+            <div class="cards">
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, nobis dolor aspernatur nemo repellat voluptatem!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, nobis dolor aspernatur nemo repellat voluptatem!</p>
+                </div>
+                <div class="text-card">
+                    <h3>Title</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima, nobis dolor aspernatur nemo repellat voluptatem!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="formG">
+        <div class="box">
+        <h3>Send Me a Message</h3>
+        <form action="https://formsubmit.co/ajbaum2019@gmail.com">
+            <div class="formBox">
+                <div class="row50">
+                    <div class="inputBox">
+                        <span>First Name</span>
+                        <input type="name" placeholder="Austin">
+                    </div>
+                    <div class="inputBox">
+                        <span>Last Name</span>
+                        <input type="text" placeholder="Baum">
+                    </div>
+                </div>
+                <div class="row50">
+                    <div class="inputBox">
+                        <span>Email Address</span>
+                        <input type="email">
+                    </div>
+                    <div class="inputBox">
+                        <span>Phone Number</span>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="row100">
+                    <div class="inputBox">
+                        <span>Message</span>
+                        <textarea placeholder="Write message here!"></textarea>
+                    </div>
+                </div>
+                <div class="row100">
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+    </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="app.js"></script>
+    <script>  window.addEventListener('scroll', function(){
+        let header = document.querySelector('header');
+        let windowPosition = window.scrollY > 0;
+        header.classList.toggle('scrolling-active', windowPosition);
+       })
+       </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', revealB);
+
+        function revealB(){
+            var reveals = document.querySelectorAll('.revealB');
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+     <script type="text/javascript">
+        window.addEventListener('scroll', revealL);
+
+        function revealL(){
+            var reveals = document.querySelectorAll('.revealL');
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        window.addEventListener('scroll', revealR);
+
+        function revealR(){
+            var reveals = document.querySelectorAll('.revealR');
+            for(var i = 0; i < reveals.length; i++){
+
+                var windowheight = window.innerHeight;
+                var revealtop = reveals[i].getBoundingClientRect().top;
+                var revealpoint = 150;
+
+                if(revealtop < windowheight - revealpoint){
+                    reveals[i].classList.add('active');
+                }else{
+                    reveals[i].classList.remove('active');
+                }
+            }
+        }
+    </script>
+
+    
+</body>
+</html>

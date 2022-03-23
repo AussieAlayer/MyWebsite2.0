@@ -1,0 +1,289 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  color: #678;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: background-color 1s ease;
+  transition: justify-content 1s ease;
+  z-index: 1000;
+}
+
+.navbar {
+  justify-content: space-between;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  height: 60px;
+  transition: background-color 1s ease;
+  transition: justify-content 1s ease;
+}
+.navbar .name{
+    display: none;
+}
+.navbar .name .title{
+    display: none;
+    padding: 15px 7px 0px 20px;
+    display: inline-block ;
+    font-weight: 700;
+    font-size: 27px;
+    flex-direction: row;
+    color:rgb(0, 0, 0);
+}
+
+.navbar .name .title1{
+    display: none;
+    padding: 15px 7px 0px 0px;
+    display: inline-block ;
+    font-weight: 700;
+    font-size: 27px;
+    flex-direction: row;
+    color:rgb(0, 0, 0);
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0 40px;
+  width: 100%;
+  justify-content: center;
+}
+.navbar ul li {
+  margin: 0rem 1rem;
+  padding: 10px 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f4f4f4;
+}
+
+.navbar ul li:hover {
+    box-shadow: 0 7px rgb(0, 0, 0);
+    transition: all .75s ease;
+}
+
+/*Scrolling active*/
+.scrolling-active {
+  background-color: #678;
+  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.3);
+}
+
+.scrolling-active .navbar .title{
+    justify-content: left;
+    color: black;
+}
+.scrolling-active .navbar ul {
+  justify-content: flex-end;
+}
+
+.scrolling-active .navbar ul li a {
+  color: black;
+}
+
+.scrolling-active .navbar ul li:hover {
+  box-shadow: 0 7px aqua;
+  transition: all 0.75s ease;
+}
+
+.scrolling-active .navbar .name{
+    display: flex;
+}
+
+section {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+section .contain{
+    padding: 100px;
+}
+
+section h2{
+    font-size: 40px;
+    color:rgb(0, 0, 0);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+section .cards{
+    display: flex;
+}
+
+section .cards .text-card{
+    background-color: rgb(36, 36, 36);
+    margin: 20px;
+    padding: 20px;
+}
+
+section .cards .text-card h3{
+    font-size: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.revealB{
+    overflow-x: hidden;
+    position: relative;
+    transform: translateY(250px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.revealB.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.revealL{
+    overflow-x: hidden;
+    position: relative;
+    transform: translateX(250px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.revealL.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.revealR{
+    overflow-x: hidden;
+    position: relative;
+    transform: translateX(-250px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.revealR.active{
+    transform: translateX(0px);
+    opacity: 1;
+}
+
+.ptext {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  font-size: 27px;
+  letter-spacing: 9px;
+}
+.pimg1 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg1 {
+  background-image: url("../images/desertStal.jpg");
+  min-height: 100%;
+}
+
+section#home{
+    background: rgb(216, 216, 216);
+    overflow-x: hidden;
+}
+
+section#about{
+    background: rgb(150, 151, 151);
+}
+
+section#contact{
+  position: relative;
+  display: flex;
+   width: 100%;
+   background: rgb(150, 151, 151);
+   justify-content: center;
+}
+
+/*Form*/
+.box{
+  position: relative;
+  display: grid;
+}
+.formG{
+  padding: 0;
+}
+
+.formBox{
+  position: relative;
+  width: 100%;
+}
+
+.formBox .row50{
+  display: flex;
+  gap: 20px;
+}
+
+.inputBox{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+.formBox .row100 .inputBox{
+  width: 100%;
+}
+
+.inputBox span{
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.inputBox input{
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+}
+.inputBox textarea{
+  padding: 10px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #333;
+  resize: none;
+  min-height: 220px;
+  margin-bottom: 10px;
+}
+.inputBox input[type="submit"]{
+  background: #678;
+  color:#f4f4f4;
+  border: none;
+  font-size: 1.1em;
+  max-width: 120px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 14px 15px;
+}
+.inputBox ::placeholder{
+  color: #999;
+}
+
