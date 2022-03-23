@@ -150,7 +150,7 @@ section .cards .text-card h3{
     position: relative;
     transform: translateY(250px);
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .revealB.active{
@@ -163,7 +163,7 @@ section .cards .text-card h3{
     position: relative;
     transform: translateX(250px);
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .revealL.active{
@@ -176,7 +176,7 @@ section .cards .text-card h3{
     position: relative;
     transform: translateX(-250px);
     opacity: 0;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 .revealR.active{
@@ -201,8 +201,22 @@ section .cards .text-card h3{
   background-attachment: fixed;
 }
 
+.pimg2 {
+  position: relative;
+  opacity: 0.7;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .pimg1 {
   background-image: url("../images/desertStal.jpg");
+  min-height: 100%;
+}
+
+.pimg2 {
+  background-image: url("../images/desertNight.jpg");
   min-height: 100%;
 }
 
@@ -218,23 +232,28 @@ section#about{
 section#contact{
   position: relative;
   display: flex;
-   width: 100%;
-   background: rgb(150, 151, 151);
-   justify-content: center;
+  width: 100%;
+  background: rgb(150, 151, 151);
+  justify-content: center;
 }
-
+section#contact h2{
+  color:rgb(0, 0, 0);
+  padding: 0px;
+}
 /*Form*/
 .box{
   position: relative;
   display: grid;
 }
 .formG{
-  padding: 0;
+  padding: 0px;
 }
 
 .formBox{
+  padding-top: 0px;
   position: relative;
   width: 100%;
+  color: black;
 }
 
 .formBox .row50{
@@ -270,7 +289,7 @@ section#contact{
   outline: none;
   border: 1px solid #333;
   resize: none;
-  min-height: 220px;
+  min-height: 200px;
   margin-bottom: 10px;
 }
 .inputBox input[type="submit"]{
