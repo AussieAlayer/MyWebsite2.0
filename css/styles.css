@@ -31,30 +31,35 @@ header {
   display: flex;
   width: 100%;
   height: 60px;
-  transition: background-color 1s ease;
-  transition: justify-content 1s ease;
+
 }
 .navbar .name{
     display: none;
 }
 .navbar .name .title{
     display: none;
-    padding: 15px 7px 0px 20px;
+    font-family: 'Permanent Marker', sans-serif;
+    padding: 6px 7px 0px 20px;
     display: inline-block ;
-    font-weight: 700;
-    font-size: 27px;
+    font-weight: 200;
+    font-size: 32px;
     flex-direction: row;
-    color:rgb(0, 0, 0);
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navbar .name .title1{
     display: none;
-    padding: 15px 7px 0px 0px;
+    font-family: 'Permanent Marker', sans-serif;
+    padding: 6px 7px 0px 0px;
     display: inline-block ;
-    font-weight: 700;
-    font-size: 27px;
+    font-weight: 200;
+    font-size: 32px;
     flex-direction: row;
-    color:rgb(0, 0, 0);
+    background: -webkit-linear-gradient(#eee, #333);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .navbar ul {
@@ -73,39 +78,56 @@ header {
   text-decoration: none;
   text-transform: uppercase;
   color: #f4f4f4;
+  transition: 5s;
 }
 
-.navbar ul li:hover {
-    box-shadow: 0 7px rgb(0, 0, 0);
-    transition: all .75s ease;
+
+/*Responsive Rules Header*/
+
+@media screen and (max-width: 768px) {
+  .scrolling-active .navbar .title{
+    display: none;
+  }
+  .scrolling-active .navbar .title1{
+    display: none;
+  }
+  .navbar ul li {
+    margin: 0rem 0rem;
+    padding: 10px 20px;
+  }
+  
 }
+
 
 /*Scrolling active*/
 .scrolling-active {
-  background-color: #678;
-  box-shadow: 0 3px 1rem rgba(0, 0, 0, 0.3);
+  background-color: rgb(0, 0, 0);
 }
 
 .scrolling-active .navbar .title{
+    font-family: 'Permanent Marker', sans-serif;
     justify-content: left;
-    color: black;
+    color: rgb(255, 255, 255);
 }
 .scrolling-active .navbar ul {
   justify-content: flex-end;
 }
 
 .scrolling-active .navbar ul li a {
-  color: black;
+  color: rgb(255, 255, 255);
+  transition: all 1s ease;
 }
 
-.scrolling-active .navbar ul li:hover {
-  box-shadow: 0 7px aqua;
+.scrolling-active .navbar ul li a:hover {
+  box-shadow: 0 5px #ffffff;
   transition: all 0.75s ease;
 }
 
 .scrolling-active .navbar .name{
     display: flex;
 }
+
+/*scrolling-active done*/
 
 section {
   flex-direction: column;
@@ -118,14 +140,43 @@ section {
 }
 
 section .contain{
-    padding: 100px;
+    padding: 50px;
 }
 
 section h2{
-    font-size: 40px;
-    color:rgb(0, 0, 0);
-    text-align: center;
-    text-transform: uppercase;
+  font-size: 40px;
+  color:rgb(255, 255, 255);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+section#projects{
+  background: rgb(0, 0, 0);
+}
+
+section#projects h2{
+  font-size: 40px;
+  font-family: 'Kaushan Script', sans-serif;
+  color:rgb(255, 255, 255);
+  text-align: right;
+  text-transform: uppercase;
+  padding-right: 5vw;
+}
+
+section#about h2{
+  font-size: 40px;
+  font-family: 'Kaushan Script', sans-serif;
+  color:rgb(0, 0, 0);
+  text-align: left;
+  text-transform: uppercase;
+  padding-left: 10vw; 
+}
+
+section#about{
+  background: rgb(0, 0, 0);
+}
+section#about .contain{
+  padding-top: 0px;
 }
 
 section .cards{
@@ -143,6 +194,13 @@ section .cards .text-card h3{
     text-align: center;
     text-transform: uppercase;
     margin-bottom: 10px;
+}
+
+section .cards .text-card a:link{
+  color:rgb(0, 255, 255);
+}
+section .cards .text-card a:visited{
+  color:rgb(0, 255, 21);
 }
 
 .revealB{
@@ -186,15 +244,24 @@ section .cards .text-card h3{
 
 .ptext {
   position: absolute;
-  top: 50%;
+  top: 70%;
   width: 100%;
   text-align: center;
   font-size: 27px;
   letter-spacing: 9px;
 }
+.ptext2 {
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 9px;
+}
+
 .pimg1 {
   position: relative;
-  opacity: 0.7;
+  opacity: 0.9;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -203,7 +270,25 @@ section .cards .text-card h3{
 
 .pimg2 {
   position: relative;
-  opacity: 0.7;
+  opacity: 0.9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg3 {
+  position: relative;
+  opacity: 0.9;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.pimg4 {
+  position: relative;
+  opacity: 0.9;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -211,42 +296,98 @@ section .cards .text-card h3{
 }
 
 .pimg1 {
-  background-image: url("../images/desertStal.jpg");
+  background-image: url("../images/abstract2.jpg");
   min-height: 100%;
 }
 
 .pimg2 {
+  background-image: url("../images/abstract1.jpg");
+  min-height: 100%;
+}
+
+.pimg3 {
   background-image: url("../images/desertNight.jpg");
   min-height: 100%;
 }
+
+.pimg4 {
+  background-image: url("../images/nightRoad.jpg");
+  min-height: 100%;
+}
+
 
 section#home{
     background: rgb(216, 216, 216);
     overflow-x: hidden;
 }
+.imgContain{
+  padding-top: 20vh;
+  z-index: 1000;
+}
+.imgContain img{
+  border-radius: 50%;
+  border: 2px solid #333;
+}
 
-section#about{
-    background: rgb(150, 151, 151);
+
+.portait{
+  padding: 0px 40px 40px 40px;
+  margin-right: 50vw;
+}
+.portait img{
+  box-shadow: -10px 10px 10px rgb(0, 0, 0, .8);
+  height: 450px;
+  width: 325px;
+}
+.para{
+  display: flexbox;
+  font-size: 18px;
+  margin-top: 100px;
+  padding: 20px;
+  background-color: rgb(0, 0, 0);
+}
+.abtBox{
+  display: flex;
+}
+.boxer{
+  padding: 50px;
 }
 
 section#contact{
-  position: relative;
-  display: flex;
-  width: 100%;
-  background: rgb(150, 151, 151);
   justify-content: center;
 }
 section#contact h2{
-  color:rgb(0, 0, 0);
+  font-family: 'Kaushan Script', sans-serif;
+  background: -webkit-linear-gradient( #8a2387, #e94057, #f27121);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   padding: 0px;
 }
+
+@media screen and (max-width: 768px) {
+  section#projects{
+    height: 200vh;
+  }
+  section .cards{
+    flex-direction: column;
+  }
+}
+
+
 /*Form*/
 .box{
   position: relative;
   display: grid;
 }
 .formG{
-  padding: 0px;
+  z-index: 999;
+  background: rgba(150, 151, 151, 0.452);
+  border-radius: 5%;
+  padding-top: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 20vw;
+  margin-right: 20vw;
 }
 
 .formBox{
@@ -293,7 +434,8 @@ section#contact h2{
   margin-bottom: 10px;
 }
 .inputBox input[type="submit"]{
-  background: #678;
+  border-radius: 10px;
+  background: rgb(51, 74, 97);
   color:#f4f4f4;
   border: none;
   font-size: 1.1em;
